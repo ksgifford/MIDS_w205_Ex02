@@ -5,12 +5,14 @@ import tweepy, copy
 import Queue, threading
 
 from streamparse.spout import Spout
-import tweet_cred
+import sys, os
+sys.path.append('/home/w205/MIDS_w205_Ex02/extweetwordcount/src/spouts')
+from tweet_cred import credentials
 
 ################################################################################
 # Twitter credentials
 ################################################################################
-twitter_credentials = tweet_cred.credentials()
+twitter_credentials = credentials()
 
 def auth_get(auth_key):
     if auth_key in twitter_credentials:
