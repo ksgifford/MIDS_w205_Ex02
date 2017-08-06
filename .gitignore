@@ -1,6 +1,9 @@
 # Excluding Twitter credential information from codebase
 Twittercredentials.py
 
+#Mac OSX stuff
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
