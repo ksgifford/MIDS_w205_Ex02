@@ -1,5 +1,6 @@
 # Excluding Twitter credential information from codebase
 Twittercredentials.py
+tweet_cred.py
 
 #Mac OSX stuff
 .DS_Store
