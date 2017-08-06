@@ -5,16 +5,16 @@ import tweepy, copy
 import Queue, threading
 
 from streamparse.spout import Spout
-import Twittercredentials as TC
+from twittercredentials import *
 
 ################################################################################
 # Twitter credentials
 ################################################################################
 twitter_credentials = {
-    "consumer_key"        :  TC.consumer_key,
-    "consumer_secret"     :  TC.consumer_secret,
-    "access_token"        :  TC.access_token,
-    "access_token_secret" :  TC.access_token_secret,
+    "consumer_key"        :  Twittercredentials.consumer_key,
+    "consumer_secret"     :  Twittercredentials.consumer_secret,
+    "access_token"        :  Twittercredentials.access_token,
+    "access_token_secret" :  Twittercredentials.access_token_secret,
 }
 
 def auth_get(auth_key):
