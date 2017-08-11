@@ -10,8 +10,10 @@ if len(sys.argv) < 1:
     records = cur.fetchall()
     for rec in records:
         print rec[0], " ", rec[1], '\n'
-elif len(sys.argv) = 1:
+elif len(sys.argv) == 1:
     word = sys.argv[0]
     cur.execute("SELECT count FROM tweetwordcount WHERE word=%s", (word,))
     wrd_count = cur.fetchall()
     print 'Total number of occurences of "', word, '": ', wrd_count[0][0]
+else:
+    print 'Too many arguments! Please enter a single word.'
