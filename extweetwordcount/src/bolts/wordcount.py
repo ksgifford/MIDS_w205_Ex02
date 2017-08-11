@@ -15,7 +15,7 @@ class WordCounter(Bolt):
     def process(self, tup):
         word = tup.values[0]
 
-        cur = conn.cursor()
+        cur = self.conn.cursor()
         cur.execute("UPDATE tweetwordcount SET count = count+1 WHERE word=%s", (word,))
         if cur.rowcount == 0:
             cur.execute("INSERT INTO tweetwordcount (word, count) VALUES (%s, 1)", (word))
