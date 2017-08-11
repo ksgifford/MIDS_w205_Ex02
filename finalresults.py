@@ -16,7 +16,6 @@ elif len(sys.argv) == 2:
     wrd_count = cur.fetchall()
     if len(wrd_count) == 0:
         print "I'm sorry, that word wasn't found."
-        break
     else:
         print 'Total number of occurences of "', word, '": ', wrd_count[0][0]
 else:
