@@ -14,9 +14,9 @@ elif len(sys.argv) == 2:
     word = sys.argv[1]
     cur.execute("SELECT count FROM tweetwordcount WHERE word=%s", (word,))
     wrd_count = cur.fetchall()
-    if len(wrd_count) == 0:
-        print "I'm sorry, that word wasn't found."
-    else:
+    try:
         print 'Total number of occurences of "', word, '": ', wrd_count[0][0]
+    except IndexError:
+        print "I'm sorry, that word wasn't found."
 else:
     print 'Too many arguments! Please enter a single word.'
