@@ -18,7 +18,7 @@ class WordCounter(Bolt):
         cur = self.conn.cursor()
         cur.execute("UPDATE tweetwordcount SET count = count+1 WHERE word=%s", (word,))
         if cur.rowcount == 0:
-            cur.execute("INSERT INTO tweetwordcount (word, count) VALUES (%s, 1)", (str(word)))
+            cur.execute("INSERT INTO tweetwordcount (word, count) VALUES (%s, 1)", (word,))
         self.conn.commit()
         # Write codes to increment the word count in Postgres
         # Use psycopg to interact with Postgres
