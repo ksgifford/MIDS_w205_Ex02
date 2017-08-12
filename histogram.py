@@ -10,7 +10,7 @@ if len(sys.argv) < 3:
 elif len(sys.argv) == 3:
     low = sys.argv[1].split(',')[0]
     high = sys.argv[2].split(',')[0]
-    cur.execute("SELECT * FROM tweetwordcount WHERE count >= %s AND count <= %s", (low,high))
+    cur.execute("SELECT * FROM tweetwordcount WHERE count >= %s AND count <= %s ORDER BY count DESC", (low,high))
     wrd_list = cur.fetchall()
     for wrd in wrd_list:
         print wrd[0], ':', wrd[1]
