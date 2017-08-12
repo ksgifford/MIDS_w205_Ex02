@@ -19,4 +19,4 @@ elif len(sys.argv) == 2:
     except IndexError:
         print "I'm sorry, that word wasn't found."
 else:
-    print 'Too many arguments! Please enter a single word.'
+    print "Too many arguments! Please enter a single word."
