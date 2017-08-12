@@ -15,4 +15,4 @@ elif len(sys.argv) == 3:
     for wrd in wrd_list:
         print wrd[0], ':', wrd[1]
 else:
-    print "Too many arguments! Please enter an upper and lower bound.""
+    print "Too many arguments! Please enter an upper and lower bound."
