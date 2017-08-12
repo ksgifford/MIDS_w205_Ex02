@@ -8,8 +8,8 @@ cur = conn.cursor()
 if len(sys.argv) < 3:
     print 'Not enough arguments. Please specify an upper and lower bound.'
 elif len(sys.argv) == 3:
-    low = sys.argv[1]
-    high = sys.argv[2]
+    low = sys.argv[1].split(',')[0]
+    high = sys.argv[2].split(',')[0]
     cur.execute("SELECT * FROM tweetwordcount WHERE count >= %s AND count <= %s", (low,high))
     wrd_list = cur.fetchall()
     for wrd in wrd_list:
