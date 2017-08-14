@@ -5,6 +5,7 @@ Twitter Application Instructions
 --------------------------------------------------------------------------------
 1.  Launch an EC2 instance based on the UCB MIDS W205 EX2-FULL AMI. Install the
     necessary Python libraries:
+    
     pip install psycopg2==2.6.2
     pip install tweepy
 
@@ -13,11 +14,13 @@ Twitter Application Instructions
 3.  Start the Postgres server.
 
 4.  Change to user "w205":
+
     su - w205
 
 5.  Clone the repository into /home/w205.
 
 6.  From /home/w205 run the following:
+
     cd MIDS_w205_Ex02/
     python create_db.py
 
