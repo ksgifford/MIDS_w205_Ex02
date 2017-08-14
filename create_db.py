@@ -8,14 +8,14 @@ conn = psycopg2.connect(database="postgres", user="postgres", password="pass", h
 try:
     conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     cur = conn.cursor()
-    cur.execute("CREATE DATABASE tcount_test")
+    cur.execute("CREATE DATABASE tcount")
     cur.close()
     conn.close()
 except:
     print "Could not create tcount"
 
 #Connecting to tcount
-conn = psycopg2.connect(database="tcount_test", user="postgres", password="pass", host="localhost", port="5432")
+conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
 
 #Create tweetwordcount table
 cur = conn.cursor()
